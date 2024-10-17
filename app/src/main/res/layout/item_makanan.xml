@@ -1,0 +1,73 @@
+<!-- res/layout/item_makanan.xml -->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="16dp">
+
+        <!-- ImageView untuk gambar makanan di kiri -->
+        <ImageView
+            android:id="@+id/ivGambarMakanan"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Gambar Makanan" />
+
+        <!-- Layout untuk Nama, Deskripsi, dan Harga -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Nama makanan dan harga dalam satu baris -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Nama makanan -->
+                <TextView
+                    android:id="@+id/tvNamaMakanan"
+                    android:layout_width="0dp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nama Makanan"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <!-- Harga makanan -->
+                <TextView
+                    android:id="@+id/tvHargaMakanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 0"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Deskripsi makanan -->
+            <TextView
+                android:id="@+id/tvDeskripsiMakanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Deskripsi makanan"
+                android:textSize="14sp"
+                android:paddingTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
